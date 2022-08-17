@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import "./postsList.css";
 import { getPostsError, getPostsStatus, selectAllPosts } from "../../redux/postsSlice";
 import PostsExcerpt from "../../components/postExcerpt/PostExcerpt";
+import Loader from "../../components/loader/Loader";
 
 const PostsList = () => {
     const posts = useSelector(selectAllPosts);
@@ -11,7 +12,7 @@ const PostsList = () => {
     let content;
     if (postStatus === 'loading') {
         content = <div className="postError">
-                    <h2 className="postErrorText">Post not found!</h2>
+                    <Loader />
                 </div>;
     } else if (postStatus === 'succeeded') {
         let orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
