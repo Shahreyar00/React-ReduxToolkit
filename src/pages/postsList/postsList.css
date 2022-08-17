@@ -1,0 +1,28 @@
+.postsListContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postsListWrapper{
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 25px;
+}
+
+
+@media screen and (max-width:980px){
+    .postsListWrapper{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:564px){
+    .postsListWrapper{
+        width: 95%;
+    }
+}

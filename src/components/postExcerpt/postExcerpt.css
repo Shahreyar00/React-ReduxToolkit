@@ -1,0 +1,56 @@
+.postExcerptContainer{
+    width: 50%;
+    border: 2px solid black;
+    padding: 20px 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.excerptTitle{
+    font-size: 18px;
+    text-align: center;
+}
+
+.excerptCredit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.viewPost{
+    padding: 5px 10px;
+    background: blue;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.authorName{
+    color: orange;
+    font-weight: 500;
+}
+
+@media screen and (max-width:886px){
+    .postExcerptContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:564px){
+    .excerptCredit{
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .postExcerptContainer{
+        width: 100%;
+    }
+}
+

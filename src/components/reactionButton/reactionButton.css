@@ -1,0 +1,19 @@
+.reactionsContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reactionButton{
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: skyblue;
+    color: white;
+    font-weight: 600;
+}
+
