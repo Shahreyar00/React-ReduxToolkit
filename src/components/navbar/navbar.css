@@ -27,13 +27,49 @@
 
 .navItems{
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+.navItems>button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: skyblue;
+    color: white;
+    cursor: pointer;
 }
 
 .navItemText{
     font-weight: 500;
     font-size: 18px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #febb02;
+}
+
+@media screen and (max-width:524px){
+    .navItems{
+        gap: 5px;
+    }
+
+    .navItemText{
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+}
+
+
+@media screen and (max-width:386px){
+    .navItems{
+        gap: 3px;
+    }
+
+    .navItemText{
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 3px;
+    }
 }

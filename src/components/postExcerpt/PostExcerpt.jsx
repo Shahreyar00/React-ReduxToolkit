@@ -1,11 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { selectPostById } from '../../redux/postsSlice';
 import PostAuthor from '../postAuthor/PostAuthor';
 import ReactionButton from '../reactionButton/ReactionButton';
 import TimeAgo from '../timeAgo/TimeAgo';
 import "./postExcerpt.css";
 
-const PostExcerpt = ({ post }) => {
+const PostExcerpt = ({ postId }) => {
+    const post = useSelector(state => selectPostById(state, postId));
+
     return (
         <div className="postExcerptContainer">
             <h2 className="excerptTitle">{post.title}</h2>

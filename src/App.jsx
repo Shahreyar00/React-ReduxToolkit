@@ -5,6 +5,8 @@ import PostsList from "./pages/postsList/PostsList";
 import AddPost from "./pages/addPost/AddPost";
 import EditPost from "./pages/editPost/EditPost";
 import SinglePost from "./pages/singlePost/SinglePost";
+import UserList from "./pages/usersList/UserList";
+import SingleUser from "./pages/singleUser/SingleUser";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => {
@@ -19,6 +21,12 @@ const App = () => {
                         <Route path=":postId" element={<SinglePost />} />
                         <Route path="edit/:postId" element={<EditPost />} />
                     </Route>
+
+                    <Route path="user">
+                        <Route index element={<UserList />} />
+                        <Route path=":userId" element={<SingleUser />} />
+                    </Route>
+                    
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>
